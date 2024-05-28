@@ -15,14 +15,14 @@ int findStrInF(std::string filename, std::string str) {
 
     string s;
     char temp;
-    std::ifstream ifs(filename);
+    std::ifstream books(filename);
 
-    if (!ifs.is_open()) {
+    if (!books.is_open()) {
         std::cerr << "File error." << std::endl;
         return -1;
     }
-    ifs.unsetf(std::ios::skipws);
-    while (ifs >> temp)
+    books.unsetf(std::ios::skipws);
+    while (books >> temp)
         s += temp;
 
     int i = 0;
@@ -182,9 +182,9 @@ void editBook(std::vector<Book>& books, const std::string& id) {
     }
 }
 
-//////////////////////////////////////////////////////////////////////////////////////////
-///////////////////////////////////////// MAIN() /////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////////////////
+
+// MAIN
+
 
 int main() {
 
@@ -192,8 +192,8 @@ int main() {
 
     std::cout << "//////////////////////////////////////////////////////\n\t\tЗадание №1\n\n";
     std::string str = "include";
-    std::string filename = "C:/Users/user/Desktop/text.txt";
-    //std::cin >> str;
+    std::string filename = "C:/Users/user/source/repos/lab5_sem4_Sample/books.txt";
+    std::cin >> str;
     std::cout << "Количество упомянаний слова " << str << ": " << findStrInF(filename, str) << std::endl;
 
     //////////////////////////////////////////////////////////////////////////////////////////////
@@ -205,7 +205,7 @@ int main() {
     // Запись в текстовый файл
     std::ofstream textFile("matrices.txt");
     if (textFile.is_open()) {
-        textFile << "3 3\n"; // Пример записи одной матрицы
+        textFile << "1 2\n3 4"; // Пример записи одной матрицы
         textFile.close();
     }
     else {
@@ -259,7 +259,7 @@ int main() {
         std::cout << matrix << std::endl;
     }
 
-    ////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////// N3
 
     std::cout << "//////////////////////////////////////////////////////\n\n\t\tЗадание №3\n";
 

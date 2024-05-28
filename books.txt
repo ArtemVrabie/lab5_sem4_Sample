@@ -1,1 +1,5 @@
-1 1 1 1
+0001 A.S.Pushkin Dubrovsky 142
+0002 Y.Gibson Neuromancer 347
+0003 L.Tolstoy WarAndPeace 1000
+34 JJ rowling 300
+0004 Nicolas myLife 500
